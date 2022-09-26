@@ -1,0 +1,235 @@
+<!--
+Temas aplicados:
+HTML5
+Etiquetas utilizadas
+<main></main>
+<h1></h1>
+<h2></h2>
+<section></section>
+<div></div>
+<article></article>
+
+Estilos utilizados
+Bootstrap
+1. Enlazamos bootstrap css y jscript
+2. Container y container fluid
+4. Clases
+    class="col"
+    <article class="col-4" > indicamos que esta columna abarque de las 12 columnas 3:  12/4= 3
+    class="row"
+
+CSS Nativo
+1. Coloreamos un elemento: .gris{background-color: #cec2c9;}
+2. Borde a articulos: article {border: 2px solid black;}
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+    Enlazamos boostrap, 2 opciones por la red de contenidos CDN o descargando en forma estatica la definicion
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    -->
+    <!-- las librerias  de estilo las ponemos antes que los estilos personalizados -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- Utilizo un componente bootstrap para crear el menu -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+         <a class="navbar-brand" href="#"> <img src="../assets/images/logo.png" alt="" class="logo">     </a>
+          <hr>
+
+          <!-- Este es el Menu hamburguesa -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <nav class="collapse navbar-collapse  justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Características</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Precios</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Enlace dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Acción</a></li>
+                  <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                  <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
+                </ul>
+              </li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+<main>
+
+
+    <section>
+        <h2>Container</h2>
+        <!-- Container Fluid  y container-->
+        <div class="container-fluid verde">
+            Soy un container fluid
+        </div>
+        <br>
+        <div class="container azul">
+            Soy un container
+        </div>
+        <br>
+        <div class="container-fluid azul_claro">
+            Soy un container fluid
+        </div>
+        <br>
+        <div class="container rosa">
+            Soy un container
+        </div>
+        <br>
+        <div class="container amarillo">
+            Soy un container
+        </div>
+        <br>
+        <div class="container gris">
+            ¿Por qué Ready?
+        </div>
+    </section>
+<br>
+
+<!-- Aqui pongo un carrusel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../assets/images/logo.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/1332.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/logo.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators  " data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+
+<!-- notas desplegables -->
+<br>
+
+<p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+        Toggle con collapse
+      </button>
+    </p>
+    <div style="min-height: 120px;">
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body" style="width: 300px;">
+          Este es un contenido placeholder para un colapso horizontal. Está oculto de forma predeterminada y se muestra cuando se activa.
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+        Toggle con collapse
+      </button>
+    </p>
+    <div style="min-height: 120px;">
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body" style="width: 300px;">
+          Este es un contenido placeholder para un colapso horizontal. Está oculto de forma predeterminada y se muestra cuando se activa.
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+        Toggle con collapse
+      </button>
+    </p>
+    <div style="min-height: 120px;">
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body" style="width: 300px;">
+          Este es un contenido placeholder para un colapso horizontal. Está oculto de forma predeterminada y se muestra cuando se activa.
+        </div>
+      </div>
+    </div>
+
+
+<!-- Boton con bootstrap -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Noticias del Mundo -->
+<section class="container-fluid gris">
+    <h2>Noticias</h2>
+        <div class="row">
+
+        <article class="col">
+            <h3>Qué hacemos</h3>
+            <p>Gestionamos el match perfecto entre las necesidades de la empresa y el talento con las competencias y la experiencia buscada y la experiencia buscada y la experiencia buscada y la experiencia buscada y la experiencia.</p>
+        </article>
+
+        <article class="col">
+            <h3>Qué hacemos</h3>
+            <p>Gestionamos el match perfecto entre las necesidades de la empresa y el talento con las competencias y la experiencia buscada y la experiencia buscada y la experiencia buscada y la experiencia buscada y la experiencia.</p>
+        </article>
+
+        <article class="col">
+            <h3>Nuestra solución</h3>
+            <p>Ofrecemos a los talentos la posibilidad de seguir trabajando para compañías líderes de argentina y del mundo, de forma flexible, a la vez que le ofrecemos a las compañías talento calificado a un menor costo</p>
+        </article>
+
+        <!-- Ocultamos este contenido si la resolucion es para xs -->
+<!-- <section class="conten"></section> -->
+        <article class="col-4" >
+            <h3>Nuestro propósito</h3>
+            <p>Acompañar a aquellos profesionales que buscanonales que buscanonales que buscanonales que buscan pndo.</p>
+        
+           <div class="row">
+                <article class="col">
+                    <h3>Normal</h3>
+                    <p>Opcional 0.</p>
+                </article>
+                <article class="col">
+                    <h3>Premium</h3>
+                    <p>Opcional 1.</p>
+                </article>
+            </div>
+        </article>
+    </div>
+</section>
+</main>
+
+    <!-- las funciones de JS las ponemos al final para que no afecte la carga personalizada -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

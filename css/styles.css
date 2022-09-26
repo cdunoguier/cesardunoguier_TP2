@@ -1,3 +1,5 @@
+
+
 .verde{
    background-color: #056154;
    }
@@ -26,6 +28,12 @@ article {border: 2px solid black ; }
 
 
 sub.article {border: none ; }
+
+/* Personalizamos el Menu */
+.nav-link {color: #7427f9;font-size: 1em;text-align: center;} 
+.logo {margin: 0;padding:10px 10px; width: 50%;}
+.nav-item {font-family:'Heebo', sans-serif; font-size: 1em;text-align: center;color: #d61d8fda;}
+/* .navbar-nav .navbar {color: #1f1fc6;} */
 
 /* Enlazamos boostrap*/
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

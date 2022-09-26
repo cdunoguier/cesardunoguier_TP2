@@ -21,25 +21,114 @@
 </head>
 
 <body>
-    <header>
-        <!-- Aqui pongo un contenedor para el logo y la barra de navegacion-->
-        <div class="container">
+    <head>
+        <!-- En el head definimos los parametros estructurales y generales de la pagina -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Aqui ponemos el titulo que se vera en la pestaña del navegador -->
+        <title>Ready ! - Contrata con Confianza</title>
+        <!-- Imagenes: defino el ico y la carpeta que sera utilizada para las imagenes  -->
+        <link rel="shortcut icon" href="./assets/images/ready.ico">
+        <!-- Aqui tengo definido el archivo fuente desde el cuales voy a extraer los estilos css -->
+        <link rel="stylesheet" href="./css/styles.css" />
+        <!-- Fuentes: usamos la fuente heebo desde googlefonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400;500;600&display=swap" rel="stylesheet">
+        <!-- Establecemos el ancho del viewport al número de píxeles de pantalla del dispositivo y el factor de escala en 1.0 evitando el redimensionamiento. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+        Enlazamos boostrap, 2 opciones por la red de contenidos CDN o descargando en forma estatica la definicion
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+        -->
+        <!-- las librerias  de estilo las ponemos antes que los estilos personalizados -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    
+    <body>
+        <head>
+            <!-- En el head definimos los parametros estructurales y generales de la pagina -->
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Aqui ponemos el titulo que se vera en la pestaña del navegador -->
+            <title>Ready ! - Contrata con Confianza</title>
+            <!-- Imagenes: defino el ico y la carpeta que sera utilizada para las imagenes  -->
+            <link rel="shortcut icon" href="./assets/images/ready.ico">
+            <!-- Aqui tengo definido el archivo fuente desde el cuales voy a extraer los estilos css -->
+            <link rel="stylesheet" href="./css/styles.css" />
+            <!-- Fuentes: usamos la fuente heebo desde googlefonts-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400;500;600&display=swap" rel="stylesheet">
+            <!-- Establecemos el ancho del viewport al número de píxeles de pantalla del dispositivo y el factor de escala en 1.0 evitando el redimensionamiento. -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!--
+            Enlazamos boostrap, 2 opciones por la red de contenidos CDN o descargando en forma estatica la definicion
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+            -->
+            <!-- las librerias  de estilo las ponemos antes que los estilos personalizados -->
+            <link rel="stylesheet" href="./css/bootstrap.min.css">
+            <link rel="stylesheet" href="./css/styles.css">
+        </head>
+        
+        <body>
+            <!-- Utilizo un componente bootstrap para crear el menu -->
+            <header class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                 <a class="navbar-brand" href="#"> <img src="./assets/images/logo.png" alt="" class="logo">     </a>
+                  <hr>
+        
+                  <!-- Este es el Menu hamburguesa -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+        
+                  <nav class="collapse navbar-collapse  justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+        
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/responsive1.html">responsive1</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/responsive2.html">responsive2</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="./pages/productos.html">Acción</a></li>
+                          <li><a class="dropdown-item" href="./pages/productos.html">Otra acción</a></li>
+                          <li><a class="dropdown-item" href="./pages/productos.html">Algo más aquí</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/productos.html">Compras</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+            </header>
 
-            <!-- Aqui dentro del contenedor  creo el menu navegable -->
-            <nav class="nav_menu">  
-                <div ><img class="logo" src="./assets/images/logo.png" alt=""></div>
-                 <div class="boton_navegacion">
-                <ul>
-                    <li><a href="" >Home</a></li>
-                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                    <li><a href="./pages/servicios.html">Servicios</a></li>
-                    <li><a href="./pages/productos.html">Compras</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                </ul>
-               </div>
-            </nav>
-        </div>
-    </header>
+
+
+
+
+
+
     <!-- Aqui creo una seccion para contener la parte principal del la pagina de inicio -->
 <section id="hero">
     <h1>¿Necesitas Ayuda?
@@ -56,6 +145,36 @@
 </div>
 
 </section>
+
+<!-- Aqui pongo un carrusel -->
+<!-- <section>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/images/logo.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/images/1332.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/images/logo.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators  " data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</section> -->
 
 <!-- Aqui el pie de pagina -->
 <footer class="footer">
